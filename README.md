@@ -4,7 +4,7 @@ Project - CRUD operations in MongoDB using Node.js
 
 GitHub Link :- https://github.com/carloshteles/crud-puc
 
-Languages Used :-
+Languages Used :
 
 Backend
 
