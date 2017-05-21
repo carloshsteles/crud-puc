@@ -19,12 +19,11 @@ Frontend
 
 Installation
 
-a) Install Noje.js download in https://nodejs.org/en/
-b) Run the command in root folder project:
-   install npm
-b) Install Nodemon with npm command: 
-   npm install -g nodemon
-c) start server with npm command:
-   nodemon ./server.js localhost 8000
+a) Install Noje.js download in https://nodejs.org/en/ 
+b) Run the command in root folder project: install npm
+
+b) Install Nodemon with npm command: npm install -g nodemon
+
+c) start server with npm command: nodemon ./server.js localhost 8000
 
 The Server will started in \\localhost:8000.
