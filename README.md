@@ -19,7 +19,8 @@ Frontend
 
 Installation
 
-a) Install Noje.js download in https://nodejs.org/en/ 
+a) Install Noje.js download in https://nodejs.org/en/
+
 b) Run the command in root folder project: install npm
 
 b) Install Nodemon with npm command: npm install -g nodemon
