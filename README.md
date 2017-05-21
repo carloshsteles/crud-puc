@@ -2,7 +2,7 @@
 
 Project - CRUD operations in MongoDB using Node.js
 
-GitHub Link :- https://github.com/nandit-saini/crud-nodejs-express-mongo-handlebarsjs
+GitHub Link :- https://github.com/carloshteles/crud-puc
 
 Languages Used :-
 
