@@ -1,0 +1,19 @@
+{
+  "name": "crud-puc",
+  "version": "1.0.0",
+  "description": "Trabalho Prático - disciplina DWEB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Carlos, Joabe, Flávio, Ricardo, Matheus",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.9.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>CRUD</title>
+
+	<link rel="stylesheet" type="text/css" href="css/user_home.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+
+
+	<script id="create-template" type="text/x-handlebars-template">
+	  <h1>Criar Novo Usuário</h1>
+	  <form id="create_user_form">
+	  	<div class="form-group">
+	  		<label>Nome</label>
+	  		<input class="form-control" type="text" name="name"/>
+	  	</div>
+	  	<div class="form-group">
+	  		<label>Email</label>
+	  		<input class="form-control" type="text" name="email"/>
+	  	</div>
+			<div class="form-group">
+	  		<label>Sexo</label>
+	  		<input class="form-control" type="text" name="gender"/>
+	  	</div>
+			<div align="center">
+	  		<button class="btn btn-success">Salvar</button>
+				<button class="btn btn-default" href="#" id="go_back">Voltar</button>
+			</div>
+	  </form>
+	</script>
+
+	<script id="view-template" type="text/x-handlebars-template">
+		<h1>Visualizar Usuário</h1>
+			<div class="form-group">
+				<label>Nome:</label>
+				<h4>{{name}}</h4>
+			</div>
+				<div class="form-group">
+					<label>Email:</label>
+					<h4>{{email}}</h4>
+				</div>
+				<div class="form-group">
+					<label>Sexo:</label>
+					<h4>{{gender}}</h4>
+				</div>
+				<div align="center">
+					<button class="btn btn-default" href="#" id="go_back">Voltar</button>
+				</div>
+			</form>
+	</script>
+
+	<script id="edit-template" type="text/x-handlebars-template">
+		<h1>Editar Usuário</h1>
+		<form id="edit_user_form">
+			<input id="user_id" type="hidden"  value="{{_id}}">
+		  	<div class="form-group">
+		  		<label>Nome</label>
+		  		<input class="form-control" type="text" name="name" value="{{name}}" />
+		  	</div>
+		  	<div class="form-group">
+		  		<label>Email</label>
+		  		<input class="form-control" type="text" name="email" value="{{email}}" />
+		  	</div>
+				<div class="form-group">
+		  		<label>Sexo</label>
+		  		<input class="form-control" type="text" name="gender" value="{{gender}}" />
+		  	</div>
+				<div align="center">
+		  		<button class="btn btn-success">Salvar</button>
+					<button class="btn btn-default" href="#" id="go_back">Voltar</button>
+				</div>
+	  	</form>
+	</script>
+
+	<script id="view-users" type="text/x-handlebars-template">
+	  <h1>Lista de Usuários</h1>
+	    <br/>
+			<div class="table-responsive">
+			  <table class="table">
+					<thead>
+						<tr>
+				  		<th style="text-align:center">Nome</th>
+				  		<th style="text-align:center">Email</th>
+							<th style="text-align:center">Sexo</th>
+				  		<th style="text-align:center">Ações</th>
+				  	</tr>
+					</thead>
+			  	{{#each records}}
+			  		<tr>
+							<td style="text-align:center">{{name}}</td>
+				  		<td style="text-align:center">{{email}}</td>
+							<td style="text-align:center">{{gender}}</td>
+				  		<td align="center">
+								<button class="btn btn-info view_btn glyphicon glyphicon-user" data="{{_id}}"></button>
+				  			<button class="btn btn-warning edit_btn glyphicon glyphicon-pencil" data="{{_id}}"></button>
+				  			<button class="btn btn-danger del_btn glyphicon glyphicon-trash" data="{{_id}}"></button>
+							</td>
+			  		</tr>
+
+			  	{{/each}}
+			  </table>
+			</div>
+		</div>
+	</script>
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static">
+			<div class="navbar-header">
+		    <div class="navbar-brand" href="#">CRUD
+			 	</div>
+		  </div>
+	</nav>
+	<div class="container">
+		<div class="row row-eq-height">
+      <table class="table">
+				<tr valign="top">
+					<td>
+						<div class="col-md-12 row-eq-height">
+							<div class="create side_tab">Criar Usuário
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="error col-md-12 row-eq-height">
+						</div>
+						<div class="area col-md-12 row-eq-height">
+      				<script> getUsersOnPage(); </script>
+						</div>
+					<td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="footer" style="text-align:center">
+  	<p>CRUD - Trabalho Prático - Desenvolvimento WEB - Integrantes: Carlos, Flávio, Ricardo, Matheus, Joabe (2017)</p>
+	</div>
+</body>
+</html>
